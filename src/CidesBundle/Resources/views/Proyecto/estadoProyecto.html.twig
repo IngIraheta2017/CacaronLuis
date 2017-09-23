@@ -1,0 +1,181 @@
+
+{% extends 'base1.html.twig' %}
+{% block body %}
+<section id="container" >
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <!--state overview start-->
+            <div class="row state-overview">
+                <div class="col-md-3 col-lg-3 col-sm-6">
+                    <section class="panel">
+                        <div class="symbol terques">
+                            <i class="icon-book"></i>
+                        </div>
+                        <div class="value">
+                            <h1 class="count">
+                                10
+                            </h1>
+                            <p>Nuevos</p>
+                        </div>
+                      <div class="btn-group btn-group-justified">
+                                <a class="btn btn-success" href="#">Ver</a>
+                      </div>
+                    </section>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6">
+                    <section class="panel">
+                        <div class="symbol yellow">
+                            <i class="icon-angle-up"></i>
+                        </div>
+                        <div class="value">
+                            <h1 class=" count2">
+                                7
+                            </h1>
+                            <p>En Revision</p>
+                        </div>
+                        <div class="btn-group btn-group-justified">
+                                <a class="btn btn-success" href="#">Ver</a>
+                       </div>
+                    </section>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6">
+                    <section class="panel">
+                        <div class="symbol blue ">
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="value">
+                            <h1 class=" count3">
+                                2
+                            </h1>
+                            <p>Aprobados</p>
+                        </div>
+                        <div class="btn-group btn-group-justified">
+                                <a class="btn btn-success" href="#">Ver</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6">
+                    <section class="panel">
+                        <div class="symbol red">
+                            <i class="icon-circle"></i>
+                        </div>
+                        <div class="value">
+                            <h1 class=" count4">
+                                5
+                            </h1>
+                            <p>Denegados</p>
+                        </div>
+                        <div class="btn-group btn-group-justified">
+                                <a class="btn btn-success" href="#">Ver</a>
+                      </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid col-lg-12 col-sm-12" >
+            <h2 class="text-center"> Proyectos Nuevos</h2>
+              <div class="row state-overview">
+                 <div class="col-md-6 col-sm-12">
+                    <section class="panel">
+                        <div class="symbol green">
+                           <i> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"><h2>Química</h2></span></i>
+                        </div>
+                        <div class="value">
+                          <h3> Nanocompuestos de matriz polimérica</h3>
+                          <button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-warning btn-group-justified"
+                          style="font-weight: bold;">Revisar</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <section class="panel">
+                        <div class="symbol green">
+                           <i> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"><h2>Biología</h2></span></i>
+                        </div>
+                        <div class="value">
+                          <h3> Nanocompuestos de matriz polimérica</h3>
+                          <button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-warning btn-group-justified"
+                          style="font-weight: bold;">Revisar</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <section class="panel">
+                        <div class="symbol green">
+                           <i> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"><h2>Física</h2></span></i>
+                        </div>
+                        <div class="value">
+                          <h3> Manejo de cultivos  por nitratos en suelos</h3>
+                          <button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-warning btn-group-justified"
+                          style="font-weight: bold;">Revisar</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <section class="panel">
+                        <div class="symbol green">
+                           <i> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"><h2>Informática</h2></span></i>
+                        </div>
+                        <div class="value">
+                          <h3> Proyecto de Gestión de proyectos para CIDES</h3>
+                          <button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-warning btn-group-justified"
+                          style="font-weight: bold;">Revisar</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+      </div>
+            <div class="col-lg-12 col-sm-12">
+            <section class="panel">
+
+<!-- line modal -->
+<div class="modal fade" id="squarespaceModal" tabindex="1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h3 class="modal-title" id="lineModalLabel">Nombre del Proyecto</h3>
+  </div>
+
+  {{ form_start(form,  { 'attr' : {'class' : 'form-signin'} }) }}
+              <textarea class="form-control" id="ta1" rows="1" placeholder="Nombre del Proyecto"></textarea><br>
+              <textarea class="form-control" id="ta2" rows="1" placeholder="Tema del Proyecto"></textarea><br>
+              <textarea class="form-control" id="ta3" rows="1" placeholder="Objetivos del Proyecto"></textarea><br>
+              <textarea class="form-control" id="ta4" rows="1" placeholder="Justificacion del Proyecto"></textarea><br>
+              <textarea class="form-control" id="ta5" rows="1" placeholder="Resultados Esperados"></textarea><br>
+              <textarea class="form-control" id="ta6" rows="1" placeholder="Recursos Necesarios"></textarea><br>
+              <textarea class="form-control" id="ta7" rows="1" placeholder="Nombre del Proyecto"></textarea><br>
+            {{ form_widget(form.nombreEP, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Ingrese Nombre del Estado'} }) }}
+            <span class="text-danger">
+            {{ form_errors(form.nombreEP) }}
+            </span>
+
+            {{ form_widget(form.descripcionEP, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Comentarios'} }) }}
+            <span class="text-danger">
+            {{ form_errors(form.descripcionEP) }}
+            </span>
+            <br><br>
+              {{ form_widget(form.save, {'label' : 'Guardar estado.', 'attr': {'class': 'btn btn-lg btn-login btn-block  '}}) }}
+<br><br>
+
+        {{ form_end(form) }}
+        </div>
+</div>
+</div>
+              <div class="modal-footer">
+                    CIDES 2017
+              </div>
+                </div>
+                </div>
+              </div>
+            </section>
+           </div>
+
+        </section>
+    </section>
+
+</section>
+{%endblock%}

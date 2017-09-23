@@ -1,0 +1,42 @@
+<?php
+
+namespace CidesBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class EstadoProyectoType extends AbstractType
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+        ->add('nombreEP')
+        ->add('descripcionEP')
+          ->add('save', 'submit', array('label' => 'Guardar estado del proyecto'))
+        ;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => 'CidesBundle\Entity\EstadoProyecto'
+        ));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'estadoProyecto';  //este es el nomnre del estado del proyecto
+    }
+
+
+}

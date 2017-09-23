@@ -1,0 +1,28 @@
+cides_homepage:
+    path:     /
+    defaults: { _controller: CidesBundle:Default:index }
+cides_homepage_login:
+    path:     /login
+    defaults: { _controller: CidesBundle:User:index }
+cides_homepage_registro:
+    path:     /registro
+    defaults: { _controller: CidesBundle:User:add }
+cides_homepage_create:
+    path:     /registro/create
+    defaults: { _controller: CidesBundle:User:create }
+    methods:  POST
+cides_homepage_res_estadoP:
+    path:     /proyecto
+    defaults: { _controller: CidesBundle:EstadoProyecto:add }
+cides_homepage_estadoP:
+    path:     /proyecto/create
+    defaults: { _controller: CidesBundle:EstadoProyecto:create }
+    methods:  POST
+
+agregar_proyecto:
+    path:     /agregarProyecto
+    defaults: { _controller: CidesBundle:proyecto:agregarProyecto}
+
+agregar_objetivo:
+    path:     /agregarObjetivo
+    defaults: { _controller: CidesBundle:objetivos:agregarObjetivo }
